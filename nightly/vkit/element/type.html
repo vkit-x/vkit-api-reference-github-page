@@ -42,7 +42,7 @@
 
             </li>
             <li>
-                    <a class="class" href="#FillByElementsMode">FillByElementsMode</a>
+                    <a class="class" href="#ElementSetOperationMode">ElementSetOperationMode</a>
                             <ul class="memberlist">
                 </ul>
 
@@ -105,10 +105,13 @@
 </span><span id="L-35"><a href="#L-35"><span class="linenos">35</span></a>
 </span><span id="L-36"><a href="#L-36"><span class="linenos">36</span></a>
 </span><span id="L-37"><a href="#L-37"><span class="linenos">37</span></a><span class="nd">@unique</span>
-</span><span id="L-38"><a href="#L-38"><span class="linenos">38</span></a><span class="k">class</span> <span class="nc">FillByElementsMode</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
-</span><span id="L-39"><a href="#L-39"><span class="linenos">39</span></a>    <span class="n">UNION</span> <span class="o">=</span> <span class="s1">&#39;union&#39;</span>
-</span><span id="L-40"><a href="#L-40"><span class="linenos">40</span></a>    <span class="n">DISTINCT</span> <span class="o">=</span> <span class="s1">&#39;distinct&#39;</span>
-</span><span id="L-41"><a href="#L-41"><span class="linenos">41</span></a>    <span class="n">INTERSECT</span> <span class="o">=</span> <span class="s1">&#39;intersect&#39;</span>
+</span><span id="L-38"><a href="#L-38"><span class="linenos">38</span></a><span class="k">class</span> <span class="nc">ElementSetOperationMode</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+</span><span id="L-39"><a href="#L-39"><span class="linenos">39</span></a>    <span class="c1"># Active if overlapped with one or more elements.</span>
+</span><span id="L-40"><a href="#L-40"><span class="linenos">40</span></a>    <span class="n">UNION</span> <span class="o">=</span> <span class="s1">&#39;union&#39;</span>
+</span><span id="L-41"><a href="#L-41"><span class="linenos">41</span></a>    <span class="c1"># Active if overlapped with one element.</span>
+</span><span id="L-42"><a href="#L-42"><span class="linenos">42</span></a>    <span class="n">DISTINCT</span> <span class="o">=</span> <span class="s1">&#39;distinct&#39;</span>
+</span><span id="L-43"><a href="#L-43"><span class="linenos">43</span></a>    <span class="c1"># Active if overlapped with more than one elements.</span>
+</span><span id="L-44"><a href="#L-44"><span class="linenos">44</span></a>    <span class="n">INTERSECT</span> <span class="o">=</span> <span class="s1">&#39;intersect&#39;</span>
 </span></pre></div>
 
 
@@ -159,21 +162,24 @@
 
                             </div>
                 </section>
-                <section id="FillByElementsMode">
-                            <input id="FillByElementsMode-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
+                <section id="ElementSetOperationMode">
+                            <input id="ElementSetOperationMode-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
 <div class="attr class">
             
     <span class="def">class</span>
-    <span class="name">FillByElementsMode</span><wbr>(<span class="base">enum.Enum</span>):
+    <span class="name">ElementSetOperationMode</span><wbr>(<span class="base">enum.Enum</span>):
 
-                <label class="view-source-button" for="FillByElementsMode-view-source"><span>View Source</span></label>
+                <label class="view-source-button" for="ElementSetOperationMode-view-source"><span>View Source</span></label>
 
     </div>
-    <a class="headerlink" href="#FillByElementsMode"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="FillByElementsMode-39"><a href="#FillByElementsMode-39"><span class="linenos">39</span></a><span class="k">class</span> <span class="nc">FillByElementsMode</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
-</span><span id="FillByElementsMode-40"><a href="#FillByElementsMode-40"><span class="linenos">40</span></a>    <span class="n">UNION</span> <span class="o">=</span> <span class="s1">&#39;union&#39;</span>
-</span><span id="FillByElementsMode-41"><a href="#FillByElementsMode-41"><span class="linenos">41</span></a>    <span class="n">DISTINCT</span> <span class="o">=</span> <span class="s1">&#39;distinct&#39;</span>
-</span><span id="FillByElementsMode-42"><a href="#FillByElementsMode-42"><span class="linenos">42</span></a>    <span class="n">INTERSECT</span> <span class="o">=</span> <span class="s1">&#39;intersect&#39;</span>
+    <a class="headerlink" href="#ElementSetOperationMode"></a>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="ElementSetOperationMode-39"><a href="#ElementSetOperationMode-39"><span class="linenos">39</span></a><span class="k">class</span> <span class="nc">ElementSetOperationMode</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+</span><span id="ElementSetOperationMode-40"><a href="#ElementSetOperationMode-40"><span class="linenos">40</span></a>    <span class="c1"># Active if overlapped with one or more elements.</span>
+</span><span id="ElementSetOperationMode-41"><a href="#ElementSetOperationMode-41"><span class="linenos">41</span></a>    <span class="n">UNION</span> <span class="o">=</span> <span class="s1">&#39;union&#39;</span>
+</span><span id="ElementSetOperationMode-42"><a href="#ElementSetOperationMode-42"><span class="linenos">42</span></a>    <span class="c1"># Active if overlapped with one element.</span>
+</span><span id="ElementSetOperationMode-43"><a href="#ElementSetOperationMode-43"><span class="linenos">43</span></a>    <span class="n">DISTINCT</span> <span class="o">=</span> <span class="s1">&#39;distinct&#39;</span>
+</span><span id="ElementSetOperationMode-44"><a href="#ElementSetOperationMode-44"><span class="linenos">44</span></a>    <span class="c1"># Active if overlapped with more than one elements.</span>
+</span><span id="ElementSetOperationMode-45"><a href="#ElementSetOperationMode-45"><span class="linenos">45</span></a>    <span class="n">INTERSECT</span> <span class="o">=</span> <span class="s1">&#39;intersect&#39;</span>
 </span></pre></div>
 
 
@@ -185,8 +191,8 @@
                                 <h5>Inherited Members</h5>
                                 <dl>
                                     <div><dt>enum.Enum</dt>
-                                <dd id="FillByElementsMode.name" class="variable">name</dd>
-                <dd id="FillByElementsMode.value" class="variable">value</dd>
+                                <dd id="ElementSetOperationMode.name" class="variable">name</dd>
+                <dd id="ElementSetOperationMode.value" class="variable">value</dd>
 
             </div>
                                 </dl>
