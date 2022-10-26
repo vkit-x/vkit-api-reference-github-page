@@ -32,13 +32,11 @@
         <h2>Submodules</h2>
         <ul>
                 <li><a href="element/box.html">box</a></li>
-                <li><a href="element/cropper.html">cropper</a></li>
                 <li><a href="element/image.html">image</a></li>
                 <li><a href="element/lexicon.html">lexicon</a></li>
                 <li><a href="element/line.html">line</a></li>
                 <li><a href="element/mask.html">mask</a></li>
                 <li><a href="element/opt.html">opt</a></li>
-                <li><a href="element/painter.html">painter</a></li>
                 <li><a href="element/point.html">point</a></li>
                 <li><a href="element/polygon.html">polygon</a></li>
                 <li><a href="element/score_map.html">score_map</a></li>
@@ -82,16 +80,12 @@
 </span><span id="L-15"><a href="#L-15"><span class="linenos">15</span></a>
 </span><span id="L-16"><a href="#L-16"><span class="linenos">16</span></a><span class="kn">from</span> <span class="nn">.point</span> <span class="kn">import</span> <span class="n">Point</span><span class="p">,</span> <span class="n">PointList</span><span class="p">,</span> <span class="n">PointTuple</span>
 </span><span id="L-17"><a href="#L-17"><span class="linenos">17</span></a><span class="kn">from</span> <span class="nn">.line</span> <span class="kn">import</span> <span class="n">Line</span>
-</span><span id="L-18"><a href="#L-18"><span class="linenos">18</span></a><span class="kn">from</span> <span class="nn">.box</span> <span class="kn">import</span> <span class="n">Box</span><span class="p">,</span> <span class="n">BoxOverlappingValidator</span><span class="p">,</span> <span class="n">CharBox</span>
+</span><span id="L-18"><a href="#L-18"><span class="linenos">18</span></a><span class="kn">from</span> <span class="nn">.box</span> <span class="kn">import</span> <span class="n">Box</span><span class="p">,</span> <span class="n">BoxOverlappingValidator</span>
 </span><span id="L-19"><a href="#L-19"><span class="linenos">19</span></a><span class="kn">from</span> <span class="nn">.polygon</span> <span class="kn">import</span> <span class="n">Polygon</span>
 </span><span id="L-20"><a href="#L-20"><span class="linenos">20</span></a><span class="kn">from</span> <span class="nn">.mask</span> <span class="kn">import</span> <span class="n">Mask</span><span class="p">,</span> <span class="n">MaskSetItemConfig</span>
 </span><span id="L-21"><a href="#L-21"><span class="linenos">21</span></a><span class="kn">from</span> <span class="nn">.score_map</span> <span class="kn">import</span> <span class="n">ScoreMap</span><span class="p">,</span> <span class="n">ScoreMapSetItemConfig</span>
-</span><span id="L-22"><a href="#L-22"><span class="linenos">22</span></a><span class="kn">from</span> <span class="nn">.image</span> <span class="kn">import</span> <span class="n">Image</span><span class="p">,</span> <span class="n">ImageKind</span><span class="p">,</span> <span class="n">ImageSetItemConfig</span>
-</span><span id="L-23"><a href="#L-23"><span class="linenos">23</span></a>
-</span><span id="L-24"><a href="#L-24"><span class="linenos">24</span></a><span class="kn">from</span> <span class="nn">.painter</span> <span class="kn">import</span> <span class="n">Painter</span>
-</span><span id="L-25"><a href="#L-25"><span class="linenos">25</span></a><span class="kn">from</span> <span class="nn">.cropper</span> <span class="kn">import</span> <span class="n">Cropper</span>
-</span><span id="L-26"><a href="#L-26"><span class="linenos">26</span></a>
-</span><span id="L-27"><a href="#L-27"><span class="linenos">27</span></a><span class="kn">from</span> <span class="nn">.lexicon</span> <span class="kn">import</span> <span class="n">Lexicon</span><span class="p">,</span> <span class="n">LexiconCollection</span>
+</span><span id="L-22"><a href="#L-22"><span class="linenos">22</span></a><span class="kn">from</span> <span class="nn">.image</span> <span class="kn">import</span> <span class="n">Image</span><span class="p">,</span> <span class="n">ImageMode</span><span class="p">,</span> <span class="n">ImageSetItemConfig</span>
+</span><span id="L-23"><a href="#L-23"><span class="linenos">23</span></a><span class="kn">from</span> <span class="nn">.lexicon</span> <span class="kn">import</span> <span class="n">Lexicon</span><span class="p">,</span> <span class="n">LexiconCollection</span>
 </span></pre></div>
 
 

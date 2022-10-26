@@ -42,10 +42,10 @@
 
             </li>
             <li>
-                    <a class="class" href="#DebugCharHeatmapDefault">DebugCharHeatmapDefault</a>
+                    <a class="class" href="#CharHeatmapDefaultDebug">CharHeatmapDefaultDebug</a>
                             <ul class="memberlist">
                         <li>
-                                <a class="function" href="#DebugCharHeatmapDefault.__init__">DebugCharHeatmapDefault</a>
+                                <a class="function" href="#CharHeatmapDefaultDebug.__init__">CharHeatmapDefaultDebug</a>
                         </li>
                 </ul>
 
@@ -130,7 +130,7 @@
 </span><span id="L-39"><a href="#L-39"><span class="linenos"> 39</span></a>
 </span><span id="L-40"><a href="#L-40"><span class="linenos"> 40</span></a>
 </span><span id="L-41"><a href="#L-41"><span class="linenos"> 41</span></a><span class="nd">@attrs</span><span class="o">.</span><span class="n">define</span>
-</span><span id="L-42"><a href="#L-42"><span class="linenos"> 42</span></a><span class="k">class</span> <span class="nc">DebugCharHeatmapDefault</span><span class="p">:</span>
+</span><span id="L-42"><a href="#L-42"><span class="linenos"> 42</span></a><span class="k">class</span> <span class="nc">CharHeatmapDefaultDebug</span><span class="p">:</span>
 </span><span id="L-43"><a href="#L-43"><span class="linenos"> 43</span></a>    <span class="n">score_map_max</span><span class="p">:</span> <span class="n">ScoreMap</span>
 </span><span id="L-44"><a href="#L-44"><span class="linenos"> 44</span></a>    <span class="n">score_map_min</span><span class="p">:</span> <span class="n">ScoreMap</span>
 </span><span id="L-45"><a href="#L-45"><span class="linenos"> 45</span></a>    <span class="n">char_overlapped_mask</span><span class="p">:</span> <span class="n">Mask</span>
@@ -258,7 +258,7 @@
 </span><span id="L-167"><a href="#L-167"><span class="linenos">167</span></a>
 </span><span id="L-168"><a href="#L-168"><span class="linenos">168</span></a>        <span class="n">debug</span> <span class="o">=</span> <span class="kc">None</span>
 </span><span id="L-169"><a href="#L-169"><span class="linenos">169</span></a>        <span class="k">if</span> <span class="n">run_config</span><span class="o">.</span><span class="n">enable_debug</span><span class="p">:</span>
-</span><span id="L-170"><a href="#L-170"><span class="linenos">170</span></a>            <span class="n">debug</span> <span class="o">=</span> <span class="n">DebugCharHeatmapDefault</span><span class="p">(</span>
+</span><span id="L-170"><a href="#L-170"><span class="linenos">170</span></a>            <span class="n">debug</span> <span class="o">=</span> <span class="n">CharHeatmapDefaultDebug</span><span class="p">(</span>
 </span><span id="L-171"><a href="#L-171"><span class="linenos">171</span></a>                <span class="n">score_map_max</span><span class="o">=</span><span class="n">score_map_max</span><span class="p">,</span>
 </span><span id="L-172"><a href="#L-172"><span class="linenos">172</span></a>                <span class="n">score_map_min</span><span class="o">=</span><span class="n">score_map_min</span><span class="p">,</span>
 </span><span id="L-173"><a href="#L-173"><span class="linenos">173</span></a>                <span class="n">char_overlapped_mask</span><span class="o">=</span><span class="n">char_overlapped_mask</span><span class="p">,</span>
@@ -323,50 +323,50 @@
 
                             </div>
                 </section>
-                <section id="DebugCharHeatmapDefault">
-                            <input id="DebugCharHeatmapDefault-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
+                <section id="CharHeatmapDefaultDebug">
+                            <input id="CharHeatmapDefaultDebug-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
 <div class="attr class">
             
     <span class="def">class</span>
-    <span class="name">DebugCharHeatmapDefault</span>:
+    <span class="name">CharHeatmapDefaultDebug</span>:
 
-                <label class="view-source-button" for="DebugCharHeatmapDefault-view-source"><span>View Source</span></label>
+                <label class="view-source-button" for="CharHeatmapDefaultDebug-view-source"><span>View Source</span></label>
 
     </div>
-    <a class="headerlink" href="#DebugCharHeatmapDefault"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="DebugCharHeatmapDefault-43"><a href="#DebugCharHeatmapDefault-43"><span class="linenos">43</span></a><span class="k">class</span> <span class="nc">DebugCharHeatmapDefault</span><span class="p">:</span>
-</span><span id="DebugCharHeatmapDefault-44"><a href="#DebugCharHeatmapDefault-44"><span class="linenos">44</span></a>    <span class="n">score_map_max</span><span class="p">:</span> <span class="n">ScoreMap</span>
-</span><span id="DebugCharHeatmapDefault-45"><a href="#DebugCharHeatmapDefault-45"><span class="linenos">45</span></a>    <span class="n">score_map_min</span><span class="p">:</span> <span class="n">ScoreMap</span>
-</span><span id="DebugCharHeatmapDefault-46"><a href="#DebugCharHeatmapDefault-46"><span class="linenos">46</span></a>    <span class="n">char_overlapped_mask</span><span class="p">:</span> <span class="n">Mask</span>
-</span><span id="DebugCharHeatmapDefault-47"><a href="#DebugCharHeatmapDefault-47"><span class="linenos">47</span></a>    <span class="n">char_neutralized_score_map</span><span class="p">:</span> <span class="n">ScoreMap</span>
-</span><span id="DebugCharHeatmapDefault-48"><a href="#DebugCharHeatmapDefault-48"><span class="linenos">48</span></a>    <span class="n">neutralized_mask</span><span class="p">:</span> <span class="n">Mask</span>
-</span><span id="DebugCharHeatmapDefault-49"><a href="#DebugCharHeatmapDefault-49"><span class="linenos">49</span></a>    <span class="n">neutralized_score_map</span><span class="p">:</span> <span class="n">ScoreMap</span>
+    <a class="headerlink" href="#CharHeatmapDefaultDebug"></a>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="CharHeatmapDefaultDebug-43"><a href="#CharHeatmapDefaultDebug-43"><span class="linenos">43</span></a><span class="k">class</span> <span class="nc">CharHeatmapDefaultDebug</span><span class="p">:</span>
+</span><span id="CharHeatmapDefaultDebug-44"><a href="#CharHeatmapDefaultDebug-44"><span class="linenos">44</span></a>    <span class="n">score_map_max</span><span class="p">:</span> <span class="n">ScoreMap</span>
+</span><span id="CharHeatmapDefaultDebug-45"><a href="#CharHeatmapDefaultDebug-45"><span class="linenos">45</span></a>    <span class="n">score_map_min</span><span class="p">:</span> <span class="n">ScoreMap</span>
+</span><span id="CharHeatmapDefaultDebug-46"><a href="#CharHeatmapDefaultDebug-46"><span class="linenos">46</span></a>    <span class="n">char_overlapped_mask</span><span class="p">:</span> <span class="n">Mask</span>
+</span><span id="CharHeatmapDefaultDebug-47"><a href="#CharHeatmapDefaultDebug-47"><span class="linenos">47</span></a>    <span class="n">char_neutralized_score_map</span><span class="p">:</span> <span class="n">ScoreMap</span>
+</span><span id="CharHeatmapDefaultDebug-48"><a href="#CharHeatmapDefaultDebug-48"><span class="linenos">48</span></a>    <span class="n">neutralized_mask</span><span class="p">:</span> <span class="n">Mask</span>
+</span><span id="CharHeatmapDefaultDebug-49"><a href="#CharHeatmapDefaultDebug-49"><span class="linenos">49</span></a>    <span class="n">neutralized_score_map</span><span class="p">:</span> <span class="n">ScoreMap</span>
 </span></pre></div>
 
 
     
 
-                            <div id="DebugCharHeatmapDefault.__init__" class="classattr">
-                                        <input id="DebugCharHeatmapDefault.__init__-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
+                            <div id="CharHeatmapDefaultDebug.__init__" class="classattr">
+                                        <input id="CharHeatmapDefaultDebug.__init__-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
 <div class="attr function">
             
-        <span class="name">DebugCharHeatmapDefault</span><span class="signature pdoc-code multiline">(<span class="param">	<span class="n">score_map_max</span><span class="p">:</span> <span class="n"><a href="../../element/score_map.html#ScoreMap">vkit.element.score_map.ScoreMap</a></span>,</span><span class="param">	<span class="n">score_map_min</span><span class="p">:</span> <span class="n"><a href="../../element/score_map.html#ScoreMap">vkit.element.score_map.ScoreMap</a></span>,</span><span class="param">	<span class="n">char_overlapped_mask</span><span class="p">:</span> <span class="n"><a href="../../element/mask.html#Mask">vkit.element.mask.Mask</a></span>,</span><span class="param">	<span class="n">char_neutralized_score_map</span><span class="p">:</span> <span class="n"><a href="../../element/score_map.html#ScoreMap">vkit.element.score_map.ScoreMap</a></span>,</span><span class="param">	<span class="n">neutralized_mask</span><span class="p">:</span> <span class="n"><a href="../../element/mask.html#Mask">vkit.element.mask.Mask</a></span>,</span><span class="param">	<span class="n">neutralized_score_map</span><span class="p">:</span> <span class="n"><a href="../../element/score_map.html#ScoreMap">vkit.element.score_map.ScoreMap</a></span></span>)</span>
+        <span class="name">CharHeatmapDefaultDebug</span><span class="signature pdoc-code multiline">(<span class="param">	<span class="n">score_map_max</span><span class="p">:</span> <span class="n"><a href="../../element/score_map.html#ScoreMap">vkit.element.score_map.ScoreMap</a></span>,</span><span class="param">	<span class="n">score_map_min</span><span class="p">:</span> <span class="n"><a href="../../element/score_map.html#ScoreMap">vkit.element.score_map.ScoreMap</a></span>,</span><span class="param">	<span class="n">char_overlapped_mask</span><span class="p">:</span> <span class="n"><a href="../../element/mask.html#Mask">vkit.element.mask.Mask</a></span>,</span><span class="param">	<span class="n">char_neutralized_score_map</span><span class="p">:</span> <span class="n"><a href="../../element/score_map.html#ScoreMap">vkit.element.score_map.ScoreMap</a></span>,</span><span class="param">	<span class="n">neutralized_mask</span><span class="p">:</span> <span class="n"><a href="../../element/mask.html#Mask">vkit.element.mask.Mask</a></span>,</span><span class="param">	<span class="n">neutralized_score_map</span><span class="p">:</span> <span class="n"><a href="../../element/score_map.html#ScoreMap">vkit.element.score_map.ScoreMap</a></span></span>)</span>
 
-                <label class="view-source-button" for="DebugCharHeatmapDefault.__init__-view-source"><span>View Source</span></label>
+                <label class="view-source-button" for="CharHeatmapDefaultDebug.__init__-view-source"><span>View Source</span></label>
 
     </div>
-    <a class="headerlink" href="#DebugCharHeatmapDefault.__init__"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="DebugCharHeatmapDefault.__init__-2"><a href="#DebugCharHeatmapDefault.__init__-2"><span class="linenos">2</span></a><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">score_map_max</span><span class="p">,</span> <span class="n">score_map_min</span><span class="p">,</span> <span class="n">char_overlapped_mask</span><span class="p">,</span> <span class="n">char_neutralized_score_map</span><span class="p">,</span> <span class="n">neutralized_mask</span><span class="p">,</span> <span class="n">neutralized_score_map</span><span class="p">):</span>
-</span><span id="DebugCharHeatmapDefault.__init__-3"><a href="#DebugCharHeatmapDefault.__init__-3"><span class="linenos">3</span></a>    <span class="bp">self</span><span class="o">.</span><span class="n">score_map_max</span> <span class="o">=</span> <span class="n">score_map_max</span>
-</span><span id="DebugCharHeatmapDefault.__init__-4"><a href="#DebugCharHeatmapDefault.__init__-4"><span class="linenos">4</span></a>    <span class="bp">self</span><span class="o">.</span><span class="n">score_map_min</span> <span class="o">=</span> <span class="n">score_map_min</span>
-</span><span id="DebugCharHeatmapDefault.__init__-5"><a href="#DebugCharHeatmapDefault.__init__-5"><span class="linenos">5</span></a>    <span class="bp">self</span><span class="o">.</span><span class="n">char_overlapped_mask</span> <span class="o">=</span> <span class="n">char_overlapped_mask</span>
-</span><span id="DebugCharHeatmapDefault.__init__-6"><a href="#DebugCharHeatmapDefault.__init__-6"><span class="linenos">6</span></a>    <span class="bp">self</span><span class="o">.</span><span class="n">char_neutralized_score_map</span> <span class="o">=</span> <span class="n">char_neutralized_score_map</span>
-</span><span id="DebugCharHeatmapDefault.__init__-7"><a href="#DebugCharHeatmapDefault.__init__-7"><span class="linenos">7</span></a>    <span class="bp">self</span><span class="o">.</span><span class="n">neutralized_mask</span> <span class="o">=</span> <span class="n">neutralized_mask</span>
-</span><span id="DebugCharHeatmapDefault.__init__-8"><a href="#DebugCharHeatmapDefault.__init__-8"><span class="linenos">8</span></a>    <span class="bp">self</span><span class="o">.</span><span class="n">neutralized_score_map</span> <span class="o">=</span> <span class="n">neutralized_score_map</span>
+    <a class="headerlink" href="#CharHeatmapDefaultDebug.__init__"></a>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="CharHeatmapDefaultDebug.__init__-2"><a href="#CharHeatmapDefaultDebug.__init__-2"><span class="linenos">2</span></a><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">score_map_max</span><span class="p">,</span> <span class="n">score_map_min</span><span class="p">,</span> <span class="n">char_overlapped_mask</span><span class="p">,</span> <span class="n">char_neutralized_score_map</span><span class="p">,</span> <span class="n">neutralized_mask</span><span class="p">,</span> <span class="n">neutralized_score_map</span><span class="p">):</span>
+</span><span id="CharHeatmapDefaultDebug.__init__-3"><a href="#CharHeatmapDefaultDebug.__init__-3"><span class="linenos">3</span></a>    <span class="bp">self</span><span class="o">.</span><span class="n">score_map_max</span> <span class="o">=</span> <span class="n">score_map_max</span>
+</span><span id="CharHeatmapDefaultDebug.__init__-4"><a href="#CharHeatmapDefaultDebug.__init__-4"><span class="linenos">4</span></a>    <span class="bp">self</span><span class="o">.</span><span class="n">score_map_min</span> <span class="o">=</span> <span class="n">score_map_min</span>
+</span><span id="CharHeatmapDefaultDebug.__init__-5"><a href="#CharHeatmapDefaultDebug.__init__-5"><span class="linenos">5</span></a>    <span class="bp">self</span><span class="o">.</span><span class="n">char_overlapped_mask</span> <span class="o">=</span> <span class="n">char_overlapped_mask</span>
+</span><span id="CharHeatmapDefaultDebug.__init__-6"><a href="#CharHeatmapDefaultDebug.__init__-6"><span class="linenos">6</span></a>    <span class="bp">self</span><span class="o">.</span><span class="n">char_neutralized_score_map</span> <span class="o">=</span> <span class="n">char_neutralized_score_map</span>
+</span><span id="CharHeatmapDefaultDebug.__init__-7"><a href="#CharHeatmapDefaultDebug.__init__-7"><span class="linenos">7</span></a>    <span class="bp">self</span><span class="o">.</span><span class="n">neutralized_mask</span> <span class="o">=</span> <span class="n">neutralized_mask</span>
+</span><span id="CharHeatmapDefaultDebug.__init__-8"><a href="#CharHeatmapDefaultDebug.__init__-8"><span class="linenos">8</span></a>    <span class="bp">self</span><span class="o">.</span><span class="n">neutralized_score_map</span> <span class="o">=</span> <span class="n">neutralized_score_map</span>
 </span></pre></div>
 
 
-            <div class="docstring"><p>Method generated by attrs for class DebugCharHeatmapDefault.</p>
+            <div class="docstring"><p>Method generated by attrs for class CharHeatmapDefaultDebug.</p>
 </div>
 
 
@@ -502,7 +502,7 @@
 </span><span id="CharHeatmapDefaultEngine-168"><a href="#CharHeatmapDefaultEngine-168"><span class="linenos">168</span></a>
 </span><span id="CharHeatmapDefaultEngine-169"><a href="#CharHeatmapDefaultEngine-169"><span class="linenos">169</span></a>        <span class="n">debug</span> <span class="o">=</span> <span class="kc">None</span>
 </span><span id="CharHeatmapDefaultEngine-170"><a href="#CharHeatmapDefaultEngine-170"><span class="linenos">170</span></a>        <span class="k">if</span> <span class="n">run_config</span><span class="o">.</span><span class="n">enable_debug</span><span class="p">:</span>
-</span><span id="CharHeatmapDefaultEngine-171"><a href="#CharHeatmapDefaultEngine-171"><span class="linenos">171</span></a>            <span class="n">debug</span> <span class="o">=</span> <span class="n">DebugCharHeatmapDefault</span><span class="p">(</span>
+</span><span id="CharHeatmapDefaultEngine-171"><a href="#CharHeatmapDefaultEngine-171"><span class="linenos">171</span></a>            <span class="n">debug</span> <span class="o">=</span> <span class="n">CharHeatmapDefaultDebug</span><span class="p">(</span>
 </span><span id="CharHeatmapDefaultEngine-172"><a href="#CharHeatmapDefaultEngine-172"><span class="linenos">172</span></a>                <span class="n">score_map_max</span><span class="o">=</span><span class="n">score_map_max</span><span class="p">,</span>
 </span><span id="CharHeatmapDefaultEngine-173"><a href="#CharHeatmapDefaultEngine-173"><span class="linenos">173</span></a>                <span class="n">score_map_min</span><span class="o">=</span><span class="n">score_map_min</span><span class="p">,</span>
 </span><span id="CharHeatmapDefaultEngine-174"><a href="#CharHeatmapDefaultEngine-174"><span class="linenos">174</span></a>                <span class="n">char_overlapped_mask</span><span class="o">=</span><span class="n">char_overlapped_mask</span><span class="p">,</span>
@@ -705,7 +705,7 @@ For example, a generic mapping type might be defined as::</p>
 </span><span id="CharHeatmapDefaultEngine.run-168"><a href="#CharHeatmapDefaultEngine.run-168"><span class="linenos">168</span></a>
 </span><span id="CharHeatmapDefaultEngine.run-169"><a href="#CharHeatmapDefaultEngine.run-169"><span class="linenos">169</span></a>        <span class="n">debug</span> <span class="o">=</span> <span class="kc">None</span>
 </span><span id="CharHeatmapDefaultEngine.run-170"><a href="#CharHeatmapDefaultEngine.run-170"><span class="linenos">170</span></a>        <span class="k">if</span> <span class="n">run_config</span><span class="o">.</span><span class="n">enable_debug</span><span class="p">:</span>
-</span><span id="CharHeatmapDefaultEngine.run-171"><a href="#CharHeatmapDefaultEngine.run-171"><span class="linenos">171</span></a>            <span class="n">debug</span> <span class="o">=</span> <span class="n">DebugCharHeatmapDefault</span><span class="p">(</span>
+</span><span id="CharHeatmapDefaultEngine.run-171"><a href="#CharHeatmapDefaultEngine.run-171"><span class="linenos">171</span></a>            <span class="n">debug</span> <span class="o">=</span> <span class="n">CharHeatmapDefaultDebug</span><span class="p">(</span>
 </span><span id="CharHeatmapDefaultEngine.run-172"><a href="#CharHeatmapDefaultEngine.run-172"><span class="linenos">172</span></a>                <span class="n">score_map_max</span><span class="o">=</span><span class="n">score_map_max</span><span class="p">,</span>
 </span><span id="CharHeatmapDefaultEngine.run-173"><a href="#CharHeatmapDefaultEngine.run-173"><span class="linenos">173</span></a>                <span class="n">score_map_min</span><span class="o">=</span><span class="n">score_map_min</span><span class="p">,</span>
 </span><span id="CharHeatmapDefaultEngine.run-174"><a href="#CharHeatmapDefaultEngine.run-174"><span class="linenos">174</span></a>                <span class="n">char_overlapped_mask</span><span class="o">=</span><span class="n">char_overlapped_mask</span><span class="p">,</span>
