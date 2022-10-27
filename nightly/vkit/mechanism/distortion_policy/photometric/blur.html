@@ -154,7 +154,7 @@
 </span><span id="L-24"><a href="#L-24"><span class="linenos"> 24</span></a><span class="nd">@attrs</span><span class="o">.</span><span class="n">define</span>
 </span><span id="L-25"><a href="#L-25"><span class="linenos"> 25</span></a><span class="k">class</span> <span class="nc">GaussianBlurConfigGeneratorConfig</span><span class="p">:</span>
 </span><span id="L-26"><a href="#L-26"><span class="linenos"> 26</span></a>    <span class="n">sigma_min</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.5</span>
-</span><span id="L-27"><a href="#L-27"><span class="linenos"> 27</span></a>    <span class="n">sigma_max</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">2.5</span>
+</span><span id="L-27"><a href="#L-27"><span class="linenos"> 27</span></a>    <span class="n">sigma_max</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1.0</span>
 </span><span id="L-28"><a href="#L-28"><span class="linenos"> 28</span></a>
 </span><span id="L-29"><a href="#L-29"><span class="linenos"> 29</span></a>
 </span><span id="L-30"><a href="#L-30"><span class="linenos"> 30</span></a><span class="k">class</span> <span class="nc">GaussianBlurConfigGenerator</span><span class="p">(</span>
@@ -185,7 +185,7 @@
 </span><span id="L-55"><a href="#L-55"><span class="linenos"> 55</span></a><span class="nd">@attrs</span><span class="o">.</span><span class="n">define</span>
 </span><span id="L-56"><a href="#L-56"><span class="linenos"> 56</span></a><span class="k">class</span> <span class="nc">DefocusBlurConfigGeneratorConfig</span><span class="p">:</span>
 </span><span id="L-57"><a href="#L-57"><span class="linenos"> 57</span></a>    <span class="n">radius_min</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span>
-</span><span id="L-58"><a href="#L-58"><span class="linenos"> 58</span></a>    <span class="n">radius_max</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">4</span>
+</span><span id="L-58"><a href="#L-58"><span class="linenos"> 58</span></a>    <span class="n">radius_max</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">2</span>
 </span><span id="L-59"><a href="#L-59"><span class="linenos"> 59</span></a>
 </span><span id="L-60"><a href="#L-60"><span class="linenos"> 60</span></a>
 </span><span id="L-61"><a href="#L-61"><span class="linenos"> 61</span></a><span class="k">class</span> <span class="nc">DefocusBlurConfigGenerator</span><span class="p">(</span>
@@ -216,7 +216,7 @@
 </span><span id="L-86"><a href="#L-86"><span class="linenos"> 86</span></a><span class="nd">@attrs</span><span class="o">.</span><span class="n">define</span>
 </span><span id="L-87"><a href="#L-87"><span class="linenos"> 87</span></a><span class="k">class</span> <span class="nc">MotionBlurConfigGeneratorConfig</span><span class="p">:</span>
 </span><span id="L-88"><a href="#L-88"><span class="linenos"> 88</span></a>    <span class="n">radius_min</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span>
-</span><span id="L-89"><a href="#L-89"><span class="linenos"> 89</span></a>    <span class="n">radius_max</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">4</span>
+</span><span id="L-89"><a href="#L-89"><span class="linenos"> 89</span></a>    <span class="n">radius_max</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">2</span>
 </span><span id="L-90"><a href="#L-90"><span class="linenos"> 90</span></a>
 </span><span id="L-91"><a href="#L-91"><span class="linenos"> 91</span></a>
 </span><span id="L-92"><a href="#L-92"><span class="linenos"> 92</span></a><span class="k">class</span> <span class="nc">MotionBlurConfigGenerator</span><span class="p">(</span>
@@ -251,11 +251,11 @@
 </span><span id="L-121"><a href="#L-121"><span class="linenos">121</span></a><span class="nd">@attrs</span><span class="o">.</span><span class="n">define</span>
 </span><span id="L-122"><a href="#L-122"><span class="linenos">122</span></a><span class="k">class</span> <span class="nc">GlassBlurConfigGeneratorConfig</span><span class="p">:</span>
 </span><span id="L-123"><a href="#L-123"><span class="linenos">123</span></a>    <span class="n">sigma_min</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.5</span>
-</span><span id="L-124"><a href="#L-124"><span class="linenos">124</span></a>    <span class="n">sigma_max</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">2.0</span>
+</span><span id="L-124"><a href="#L-124"><span class="linenos">124</span></a>    <span class="n">sigma_max</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1.0</span>
 </span><span id="L-125"><a href="#L-125"><span class="linenos">125</span></a>    <span class="n">delta_min</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span>
 </span><span id="L-126"><a href="#L-126"><span class="linenos">126</span></a>    <span class="n">delta_max</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span>
-</span><span id="L-127"><a href="#L-127"><span class="linenos">127</span></a>    <span class="n">loop_min</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">3</span>
-</span><span id="L-128"><a href="#L-128"><span class="linenos">128</span></a>    <span class="n">loop_max</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">8</span>
+</span><span id="L-127"><a href="#L-127"><span class="linenos">127</span></a>    <span class="n">loop_min</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span>
+</span><span id="L-128"><a href="#L-128"><span class="linenos">128</span></a>    <span class="n">loop_max</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">4</span>
 </span><span id="L-129"><a href="#L-129"><span class="linenos">129</span></a>
 </span><span id="L-130"><a href="#L-130"><span class="linenos">130</span></a>
 </span><span id="L-131"><a href="#L-131"><span class="linenos">131</span></a><span class="k">class</span> <span class="nc">GlassBlurConfigGenerator</span><span class="p">(</span>
@@ -363,7 +363,7 @@
     <a class="headerlink" href="#GaussianBlurConfigGeneratorConfig"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="GaussianBlurConfigGeneratorConfig-26"><a href="#GaussianBlurConfigGeneratorConfig-26"><span class="linenos">26</span></a><span class="k">class</span> <span class="nc">GaussianBlurConfigGeneratorConfig</span><span class="p">:</span>
 </span><span id="GaussianBlurConfigGeneratorConfig-27"><a href="#GaussianBlurConfigGeneratorConfig-27"><span class="linenos">27</span></a>    <span class="n">sigma_min</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.5</span>
-</span><span id="GaussianBlurConfigGeneratorConfig-28"><a href="#GaussianBlurConfigGeneratorConfig-28"><span class="linenos">28</span></a>    <span class="n">sigma_max</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">2.5</span>
+</span><span id="GaussianBlurConfigGeneratorConfig-28"><a href="#GaussianBlurConfigGeneratorConfig-28"><span class="linenos">28</span></a>    <span class="n">sigma_max</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1.0</span>
 </span></pre></div>
 
 
@@ -373,7 +373,7 @@
                                         <input id="GaussianBlurConfigGeneratorConfig.__init__-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
 <div class="attr function">
             
-        <span class="name">GaussianBlurConfigGeneratorConfig</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">sigma_min</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.5</span>, </span><span class="param"><span class="n">sigma_max</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">2.5</span></span>)</span>
+        <span class="name">GaussianBlurConfigGeneratorConfig</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">sigma_min</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.5</span>, </span><span class="param"><span class="n">sigma_max</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1.0</span></span>)</span>
 
                 <label class="view-source-button" for="GaussianBlurConfigGeneratorConfig.__init__-view-source"><span>View Source</span></label>
 
@@ -468,7 +468,7 @@ For example, a generic mapping type might be defined as::</p>
     <a class="headerlink" href="#DefocusBlurConfigGeneratorConfig"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="DefocusBlurConfigGeneratorConfig-57"><a href="#DefocusBlurConfigGeneratorConfig-57"><span class="linenos">57</span></a><span class="k">class</span> <span class="nc">DefocusBlurConfigGeneratorConfig</span><span class="p">:</span>
 </span><span id="DefocusBlurConfigGeneratorConfig-58"><a href="#DefocusBlurConfigGeneratorConfig-58"><span class="linenos">58</span></a>    <span class="n">radius_min</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span>
-</span><span id="DefocusBlurConfigGeneratorConfig-59"><a href="#DefocusBlurConfigGeneratorConfig-59"><span class="linenos">59</span></a>    <span class="n">radius_max</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">4</span>
+</span><span id="DefocusBlurConfigGeneratorConfig-59"><a href="#DefocusBlurConfigGeneratorConfig-59"><span class="linenos">59</span></a>    <span class="n">radius_max</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">2</span>
 </span></pre></div>
 
 
@@ -478,7 +478,7 @@ For example, a generic mapping type might be defined as::</p>
                                         <input id="DefocusBlurConfigGeneratorConfig.__init__-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
 <div class="attr function">
             
-        <span class="name">DefocusBlurConfigGeneratorConfig</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">radius_min</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span>, </span><span class="param"><span class="n">radius_max</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">4</span></span>)</span>
+        <span class="name">DefocusBlurConfigGeneratorConfig</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">radius_min</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span>, </span><span class="param"><span class="n">radius_max</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">2</span></span>)</span>
 
                 <label class="view-source-button" for="DefocusBlurConfigGeneratorConfig.__init__-view-source"><span>View Source</span></label>
 
@@ -573,7 +573,7 @@ For example, a generic mapping type might be defined as::</p>
     <a class="headerlink" href="#MotionBlurConfigGeneratorConfig"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="MotionBlurConfigGeneratorConfig-88"><a href="#MotionBlurConfigGeneratorConfig-88"><span class="linenos">88</span></a><span class="k">class</span> <span class="nc">MotionBlurConfigGeneratorConfig</span><span class="p">:</span>
 </span><span id="MotionBlurConfigGeneratorConfig-89"><a href="#MotionBlurConfigGeneratorConfig-89"><span class="linenos">89</span></a>    <span class="n">radius_min</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span>
-</span><span id="MotionBlurConfigGeneratorConfig-90"><a href="#MotionBlurConfigGeneratorConfig-90"><span class="linenos">90</span></a>    <span class="n">radius_max</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">4</span>
+</span><span id="MotionBlurConfigGeneratorConfig-90"><a href="#MotionBlurConfigGeneratorConfig-90"><span class="linenos">90</span></a>    <span class="n">radius_max</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">2</span>
 </span></pre></div>
 
 
@@ -583,7 +583,7 @@ For example, a generic mapping type might be defined as::</p>
                                         <input id="MotionBlurConfigGeneratorConfig.__init__-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
 <div class="attr function">
             
-        <span class="name">MotionBlurConfigGeneratorConfig</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">radius_min</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span>, </span><span class="param"><span class="n">radius_max</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">4</span></span>)</span>
+        <span class="name">MotionBlurConfigGeneratorConfig</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">radius_min</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span>, </span><span class="param"><span class="n">radius_max</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">2</span></span>)</span>
 
                 <label class="view-source-button" for="MotionBlurConfigGeneratorConfig.__init__-view-source"><span>View Source</span></label>
 
@@ -682,11 +682,11 @@ For example, a generic mapping type might be defined as::</p>
     <a class="headerlink" href="#GlassBlurConfigGeneratorConfig"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="GlassBlurConfigGeneratorConfig-123"><a href="#GlassBlurConfigGeneratorConfig-123"><span class="linenos">123</span></a><span class="k">class</span> <span class="nc">GlassBlurConfigGeneratorConfig</span><span class="p">:</span>
 </span><span id="GlassBlurConfigGeneratorConfig-124"><a href="#GlassBlurConfigGeneratorConfig-124"><span class="linenos">124</span></a>    <span class="n">sigma_min</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.5</span>
-</span><span id="GlassBlurConfigGeneratorConfig-125"><a href="#GlassBlurConfigGeneratorConfig-125"><span class="linenos">125</span></a>    <span class="n">sigma_max</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">2.0</span>
+</span><span id="GlassBlurConfigGeneratorConfig-125"><a href="#GlassBlurConfigGeneratorConfig-125"><span class="linenos">125</span></a>    <span class="n">sigma_max</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1.0</span>
 </span><span id="GlassBlurConfigGeneratorConfig-126"><a href="#GlassBlurConfigGeneratorConfig-126"><span class="linenos">126</span></a>    <span class="n">delta_min</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span>
 </span><span id="GlassBlurConfigGeneratorConfig-127"><a href="#GlassBlurConfigGeneratorConfig-127"><span class="linenos">127</span></a>    <span class="n">delta_max</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span>
-</span><span id="GlassBlurConfigGeneratorConfig-128"><a href="#GlassBlurConfigGeneratorConfig-128"><span class="linenos">128</span></a>    <span class="n">loop_min</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">3</span>
-</span><span id="GlassBlurConfigGeneratorConfig-129"><a href="#GlassBlurConfigGeneratorConfig-129"><span class="linenos">129</span></a>    <span class="n">loop_max</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">8</span>
+</span><span id="GlassBlurConfigGeneratorConfig-128"><a href="#GlassBlurConfigGeneratorConfig-128"><span class="linenos">128</span></a>    <span class="n">loop_min</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span>
+</span><span id="GlassBlurConfigGeneratorConfig-129"><a href="#GlassBlurConfigGeneratorConfig-129"><span class="linenos">129</span></a>    <span class="n">loop_max</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">4</span>
 </span></pre></div>
 
 
@@ -696,7 +696,7 @@ For example, a generic mapping type might be defined as::</p>
                                         <input id="GlassBlurConfigGeneratorConfig.__init__-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
 <div class="attr function">
             
-        <span class="name">GlassBlurConfigGeneratorConfig</span><span class="signature pdoc-code multiline">(<span class="param">	<span class="n">sigma_min</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.5</span>,</span><span class="param">	<span class="n">sigma_max</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">2.0</span>,</span><span class="param">	<span class="n">delta_min</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span>,</span><span class="param">	<span class="n">delta_max</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span>,</span><span class="param">	<span class="n">loop_min</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">3</span>,</span><span class="param">	<span class="n">loop_max</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">8</span></span>)</span>
+        <span class="name">GlassBlurConfigGeneratorConfig</span><span class="signature pdoc-code multiline">(<span class="param">	<span class="n">sigma_min</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.5</span>,</span><span class="param">	<span class="n">sigma_max</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1.0</span>,</span><span class="param">	<span class="n">delta_min</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span>,</span><span class="param">	<span class="n">delta_max</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span>,</span><span class="param">	<span class="n">loop_min</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span>,</span><span class="param">	<span class="n">loop_max</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">4</span></span>)</span>
 
                 <label class="view-source-button" for="GlassBlurConfigGeneratorConfig.__init__-view-source"><span>View Source</span></label>
 
