@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="generator" content="pdoc 12.2.0"/>
+    <meta name="generator" content="pdoc 12.2.1"/>
     <title>vkit.engine.char_sampler API documentation</title>
             <link rel="icon" href="https://vkit-logo.vkit-x.com/img/favicon.ico"/>
 
@@ -71,7 +71,7 @@
 </span><span id="L-11"><a href="#L-11"><span class="linenos">11</span></a><span class="c1"># SSPL distribution, student/academic purposes, hobby projects, internal research</span>
 </span><span id="L-12"><a href="#L-12"><span class="linenos">12</span></a><span class="c1"># projects without external distribution, or other projects where all SSPL</span>
 </span><span id="L-13"><a href="#L-13"><span class="linenos">13</span></a><span class="c1"># obligations can be met. For more information, please see the &quot;LICENSE_SSPL.txt&quot; file.</span>
-</span><span id="L-14"><a href="#L-14"><span class="linenos">14</span></a><span class="kn">from</span> <span class="nn">vkit.engine.interface</span> <span class="kn">import</span> <span class="n">EngineExecutorAggregatorFactory</span>
+</span><span id="L-14"><a href="#L-14"><span class="linenos">14</span></a><span class="kn">from</span> <span class="nn">..interface</span> <span class="kn">import</span> <span class="n">EngineExecutorAggregatorFactory</span>
 </span><span id="L-15"><a href="#L-15"><span class="linenos">15</span></a>
 </span><span id="L-16"><a href="#L-16"><span class="linenos">16</span></a><span class="kn">from</span> <span class="nn">.type</span> <span class="kn">import</span> <span class="n">CharSamplerEngineRunConfig</span>
 </span><span id="L-17"><a href="#L-17"><span class="linenos">17</span></a><span class="kn">from</span> <span class="nn">.func_collate</span> <span class="kn">import</span> <span class="n">char_sampler_func_collate</span>
@@ -215,7 +215,7 @@
                 }
 
                 let heading;
-                switch (result.doc.type) {
+                switch (result.doc.kind) {
                     case "function":
                         if (doc.fullname.endsWith(".__init__")) {
                             heading = `<span class="name">${doc.fullname.replace(/\.__init__$/, "")}</span>${doc.signature}`;
@@ -242,7 +242,7 @@
                 }
                 html += `
                         <section class="search-result">
-                        <a href="${url}" class="attr ${doc.type}">${heading}</a>
+                        <a href="${url}" class="attr ${doc.kind}">${heading}</a>
                         <div class="docstring">${doc.doc}</div>
                         </section>
                     `;

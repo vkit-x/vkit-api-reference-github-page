@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="generator" content="pdoc 12.2.0"/>
+    <meta name="generator" content="pdoc 12.2.1"/>
     <title>vkit.engine.image.combiner API documentation</title>
             <link rel="icon" href="https://vkit-logo.vkit-x.com/img/favicon.ico"/>
 
@@ -141,7 +141,7 @@
 </span><span id="L-23"><a href="#L-23"><span class="linenos"> 23</span></a>
 </span><span id="L-24"><a href="#L-24"><span class="linenos"> 24</span></a><span class="kn">from</span> <span class="nn">vkit.utility</span> <span class="kn">import</span> <span class="n">rng_choice</span><span class="p">,</span> <span class="n">read_json_file</span>
 </span><span id="L-25"><a href="#L-25"><span class="linenos"> 25</span></a><span class="kn">from</span> <span class="nn">vkit.element</span> <span class="kn">import</span> <span class="n">Image</span><span class="p">,</span> <span class="n">ImageMode</span><span class="p">,</span> <span class="n">Mask</span>
-</span><span id="L-26"><a href="#L-26"><span class="linenos"> 26</span></a><span class="kn">from</span> <span class="nn">vkit.engine.interface</span> <span class="kn">import</span> <span class="p">(</span>
+</span><span id="L-26"><a href="#L-26"><span class="linenos"> 26</span></a><span class="kn">from</span> <span class="nn">..interface</span> <span class="kn">import</span> <span class="p">(</span>
 </span><span id="L-27"><a href="#L-27"><span class="linenos"> 27</span></a>    <span class="n">Engine</span><span class="p">,</span>
 </span><span id="L-28"><a href="#L-28"><span class="linenos"> 28</span></a>    <span class="n">EngineExecutorFactory</span><span class="p">,</span>
 </span><span id="L-29"><a href="#L-29"><span class="linenos"> 29</span></a>    <span class="n">NoneTypeEngineInitResource</span><span class="p">,</span>
@@ -427,13 +427,19 @@
 </span><span id="L-309"><a href="#L-309"><span class="linenos">309</span></a>
 </span><span id="L-310"><a href="#L-310"><span class="linenos">310</span></a>        <span class="k">return</span> <span class="n">Image</span><span class="p">(</span><span class="n">mat</span><span class="o">=</span><span class="n">mat</span><span class="p">)</span>
 </span><span id="L-311"><a href="#L-311"><span class="linenos">311</span></a>
-</span><span id="L-312"><a href="#L-312"><span class="linenos">312</span></a>    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">run_config</span><span class="p">:</span> <span class="n">ImageEngineRunConfig</span><span class="p">,</span> <span class="n">rng</span><span class="p">:</span> <span class="n">RandomGenerator</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Image</span><span class="p">:</span>
-</span><span id="L-313"><a href="#L-313"><span class="linenos">313</span></a>        <span class="k">assert</span> <span class="ow">not</span> <span class="n">run_config</span><span class="o">.</span><span class="n">disable_resizing</span>
-</span><span id="L-314"><a href="#L-314"><span class="linenos">314</span></a>        <span class="n">image_metas</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sample_image_metas_based_on_random_anchor</span><span class="p">(</span><span class="n">run_config</span><span class="p">,</span> <span class="n">rng</span><span class="p">)</span>
-</span><span id="L-315"><a href="#L-315"><span class="linenos">315</span></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">synthesize_image</span><span class="p">(</span><span class="n">run_config</span><span class="p">,</span> <span class="n">image_metas</span><span class="p">,</span> <span class="n">rng</span><span class="p">)</span>
-</span><span id="L-316"><a href="#L-316"><span class="linenos">316</span></a>
-</span><span id="L-317"><a href="#L-317"><span class="linenos">317</span></a>
-</span><span id="L-318"><a href="#L-318"><span class="linenos">318</span></a><span class="n">image_combiner_engine_executor_factory</span> <span class="o">=</span> <span class="n">EngineExecutorFactory</span><span class="p">(</span><span class="n">ImageCombinerEngine</span><span class="p">)</span>
+</span><span id="L-312"><a href="#L-312"><span class="linenos">312</span></a>    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span>
+</span><span id="L-313"><a href="#L-313"><span class="linenos">313</span></a>        <span class="bp">self</span><span class="p">,</span>
+</span><span id="L-314"><a href="#L-314"><span class="linenos">314</span></a>        <span class="n">run_config</span><span class="p">:</span> <span class="n">ImageEngineRunConfig</span><span class="p">,</span>
+</span><span id="L-315"><a href="#L-315"><span class="linenos">315</span></a>        <span class="n">rng</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">RandomGenerator</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+</span><span id="L-316"><a href="#L-316"><span class="linenos">316</span></a>    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Image</span><span class="p">:</span>
+</span><span id="L-317"><a href="#L-317"><span class="linenos">317</span></a>        <span class="k">assert</span> <span class="n">rng</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+</span><span id="L-318"><a href="#L-318"><span class="linenos">318</span></a>
+</span><span id="L-319"><a href="#L-319"><span class="linenos">319</span></a>        <span class="k">assert</span> <span class="ow">not</span> <span class="n">run_config</span><span class="o">.</span><span class="n">disable_resizing</span>
+</span><span id="L-320"><a href="#L-320"><span class="linenos">320</span></a>        <span class="n">image_metas</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sample_image_metas_based_on_random_anchor</span><span class="p">(</span><span class="n">run_config</span><span class="p">,</span> <span class="n">rng</span><span class="p">)</span>
+</span><span id="L-321"><a href="#L-321"><span class="linenos">321</span></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">synthesize_image</span><span class="p">(</span><span class="n">run_config</span><span class="p">,</span> <span class="n">image_metas</span><span class="p">,</span> <span class="n">rng</span><span class="p">)</span>
+</span><span id="L-322"><a href="#L-322"><span class="linenos">322</span></a>
+</span><span id="L-323"><a href="#L-323"><span class="linenos">323</span></a>
+</span><span id="L-324"><a href="#L-324"><span class="linenos">324</span></a><span class="n">image_combiner_engine_executor_factory</span> <span class="o">=</span> <span class="n">EngineExecutorFactory</span><span class="p">(</span><span class="n">ImageCombinerEngine</span><span class="p">)</span>
 </span></pre></div>
 
 
@@ -879,10 +885,16 @@
 </span><span id="ImageCombinerEngine-310"><a href="#ImageCombinerEngine-310"><span class="linenos">310</span></a>
 </span><span id="ImageCombinerEngine-311"><a href="#ImageCombinerEngine-311"><span class="linenos">311</span></a>        <span class="k">return</span> <span class="n">Image</span><span class="p">(</span><span class="n">mat</span><span class="o">=</span><span class="n">mat</span><span class="p">)</span>
 </span><span id="ImageCombinerEngine-312"><a href="#ImageCombinerEngine-312"><span class="linenos">312</span></a>
-</span><span id="ImageCombinerEngine-313"><a href="#ImageCombinerEngine-313"><span class="linenos">313</span></a>    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">run_config</span><span class="p">:</span> <span class="n">ImageEngineRunConfig</span><span class="p">,</span> <span class="n">rng</span><span class="p">:</span> <span class="n">RandomGenerator</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Image</span><span class="p">:</span>
-</span><span id="ImageCombinerEngine-314"><a href="#ImageCombinerEngine-314"><span class="linenos">314</span></a>        <span class="k">assert</span> <span class="ow">not</span> <span class="n">run_config</span><span class="o">.</span><span class="n">disable_resizing</span>
-</span><span id="ImageCombinerEngine-315"><a href="#ImageCombinerEngine-315"><span class="linenos">315</span></a>        <span class="n">image_metas</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sample_image_metas_based_on_random_anchor</span><span class="p">(</span><span class="n">run_config</span><span class="p">,</span> <span class="n">rng</span><span class="p">)</span>
-</span><span id="ImageCombinerEngine-316"><a href="#ImageCombinerEngine-316"><span class="linenos">316</span></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">synthesize_image</span><span class="p">(</span><span class="n">run_config</span><span class="p">,</span> <span class="n">image_metas</span><span class="p">,</span> <span class="n">rng</span><span class="p">)</span>
+</span><span id="ImageCombinerEngine-313"><a href="#ImageCombinerEngine-313"><span class="linenos">313</span></a>    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span>
+</span><span id="ImageCombinerEngine-314"><a href="#ImageCombinerEngine-314"><span class="linenos">314</span></a>        <span class="bp">self</span><span class="p">,</span>
+</span><span id="ImageCombinerEngine-315"><a href="#ImageCombinerEngine-315"><span class="linenos">315</span></a>        <span class="n">run_config</span><span class="p">:</span> <span class="n">ImageEngineRunConfig</span><span class="p">,</span>
+</span><span id="ImageCombinerEngine-316"><a href="#ImageCombinerEngine-316"><span class="linenos">316</span></a>        <span class="n">rng</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">RandomGenerator</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+</span><span id="ImageCombinerEngine-317"><a href="#ImageCombinerEngine-317"><span class="linenos">317</span></a>    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Image</span><span class="p">:</span>
+</span><span id="ImageCombinerEngine-318"><a href="#ImageCombinerEngine-318"><span class="linenos">318</span></a>        <span class="k">assert</span> <span class="n">rng</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+</span><span id="ImageCombinerEngine-319"><a href="#ImageCombinerEngine-319"><span class="linenos">319</span></a>
+</span><span id="ImageCombinerEngine-320"><a href="#ImageCombinerEngine-320"><span class="linenos">320</span></a>        <span class="k">assert</span> <span class="ow">not</span> <span class="n">run_config</span><span class="o">.</span><span class="n">disable_resizing</span>
+</span><span id="ImageCombinerEngine-321"><a href="#ImageCombinerEngine-321"><span class="linenos">321</span></a>        <span class="n">image_metas</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sample_image_metas_based_on_random_anchor</span><span class="p">(</span><span class="n">run_config</span><span class="p">,</span> <span class="n">rng</span><span class="p">)</span>
+</span><span id="ImageCombinerEngine-322"><a href="#ImageCombinerEngine-322"><span class="linenos">322</span></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">synthesize_image</span><span class="p">(</span><span class="n">run_config</span><span class="p">,</span> <span class="n">image_metas</span><span class="p">,</span> <span class="n">rng</span><span class="p">)</span>
 </span></pre></div>
 
 
@@ -1208,16 +1220,22 @@ For example, a generic mapping type might be defined as::</p>
 <div class="attr function">
             
         <span class="def">def</span>
-        <span class="name">run</span><span class="signature pdoc-code multiline">(<span class="param">	<span class="bp">self</span>,</span><span class="param">	<span class="n">run_config</span><span class="p">:</span> <span class="n"><a href="type.html#ImageEngineRunConfig">vkit.engine.image.type.ImageEngineRunConfig</a></span>,</span><span class="param">	<span class="n">rng</span><span class="p">:</span> <span class="n">numpy</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">_generator</span><span class="o">.</span><span class="n">Generator</span></span><span class="return-annotation">) -> <span class="n"><a href="../../element/image.html#Image">vkit.element.image.Image</a></span>:</span></span>
+        <span class="name">run</span><span class="signature pdoc-code multiline">(<span class="param">	<span class="bp">self</span>,</span><span class="param">	<span class="n">run_config</span><span class="p">:</span> <span class="n"><a href="type.html#ImageEngineRunConfig">vkit.engine.image.type.ImageEngineRunConfig</a></span>,</span><span class="param">	<span class="n">rng</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">numpy</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">_generator</span><span class="o">.</span><span class="n">Generator</span><span class="p">,</span> <span class="n">NoneType</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></span><span class="return-annotation">) -> <span class="n"><a href="../../element/image.html#Image">vkit.element.image.Image</a></span>:</span></span>
 
                 <label class="view-source-button" for="ImageCombinerEngine.run-view-source"><span>View Source</span></label>
 
     </div>
     <a class="headerlink" href="#ImageCombinerEngine.run"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="ImageCombinerEngine.run-313"><a href="#ImageCombinerEngine.run-313"><span class="linenos">313</span></a>    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">run_config</span><span class="p">:</span> <span class="n">ImageEngineRunConfig</span><span class="p">,</span> <span class="n">rng</span><span class="p">:</span> <span class="n">RandomGenerator</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Image</span><span class="p">:</span>
-</span><span id="ImageCombinerEngine.run-314"><a href="#ImageCombinerEngine.run-314"><span class="linenos">314</span></a>        <span class="k">assert</span> <span class="ow">not</span> <span class="n">run_config</span><span class="o">.</span><span class="n">disable_resizing</span>
-</span><span id="ImageCombinerEngine.run-315"><a href="#ImageCombinerEngine.run-315"><span class="linenos">315</span></a>        <span class="n">image_metas</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sample_image_metas_based_on_random_anchor</span><span class="p">(</span><span class="n">run_config</span><span class="p">,</span> <span class="n">rng</span><span class="p">)</span>
-</span><span id="ImageCombinerEngine.run-316"><a href="#ImageCombinerEngine.run-316"><span class="linenos">316</span></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">synthesize_image</span><span class="p">(</span><span class="n">run_config</span><span class="p">,</span> <span class="n">image_metas</span><span class="p">,</span> <span class="n">rng</span><span class="p">)</span>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="ImageCombinerEngine.run-313"><a href="#ImageCombinerEngine.run-313"><span class="linenos">313</span></a>    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span>
+</span><span id="ImageCombinerEngine.run-314"><a href="#ImageCombinerEngine.run-314"><span class="linenos">314</span></a>        <span class="bp">self</span><span class="p">,</span>
+</span><span id="ImageCombinerEngine.run-315"><a href="#ImageCombinerEngine.run-315"><span class="linenos">315</span></a>        <span class="n">run_config</span><span class="p">:</span> <span class="n">ImageEngineRunConfig</span><span class="p">,</span>
+</span><span id="ImageCombinerEngine.run-316"><a href="#ImageCombinerEngine.run-316"><span class="linenos">316</span></a>        <span class="n">rng</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">RandomGenerator</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+</span><span id="ImageCombinerEngine.run-317"><a href="#ImageCombinerEngine.run-317"><span class="linenos">317</span></a>    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Image</span><span class="p">:</span>
+</span><span id="ImageCombinerEngine.run-318"><a href="#ImageCombinerEngine.run-318"><span class="linenos">318</span></a>        <span class="k">assert</span> <span class="n">rng</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+</span><span id="ImageCombinerEngine.run-319"><a href="#ImageCombinerEngine.run-319"><span class="linenos">319</span></a>
+</span><span id="ImageCombinerEngine.run-320"><a href="#ImageCombinerEngine.run-320"><span class="linenos">320</span></a>        <span class="k">assert</span> <span class="ow">not</span> <span class="n">run_config</span><span class="o">.</span><span class="n">disable_resizing</span>
+</span><span id="ImageCombinerEngine.run-321"><a href="#ImageCombinerEngine.run-321"><span class="linenos">321</span></a>        <span class="n">image_metas</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sample_image_metas_based_on_random_anchor</span><span class="p">(</span><span class="n">run_config</span><span class="p">,</span> <span class="n">rng</span><span class="p">)</span>
+</span><span id="ImageCombinerEngine.run-322"><a href="#ImageCombinerEngine.run-322"><span class="linenos">322</span></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">synthesize_image</span><span class="p">(</span><span class="n">run_config</span><span class="p">,</span> <span class="n">image_metas</span><span class="p">,</span> <span class="n">rng</span><span class="p">)</span>
 </span></pre></div>
 
 
@@ -1326,7 +1344,7 @@ For example, a generic mapping type might be defined as::</p>
                 }
 
                 let heading;
-                switch (result.doc.type) {
+                switch (result.doc.kind) {
                     case "function":
                         if (doc.fullname.endsWith(".__init__")) {
                             heading = `<span class="name">${doc.fullname.replace(/\.__init__$/, "")}</span>${doc.signature}`;
@@ -1353,7 +1371,7 @@ For example, a generic mapping type might be defined as::</p>
                 }
                 html += `
                         <section class="search-result">
-                        <a href="${url}" class="attr ${doc.type}">${heading}</a>
+                        <a href="${url}" class="attr ${doc.kind}">${heading}</a>
                         <div class="docstring">${doc.doc}</div>
                         </section>
                     `;
